@@ -6,7 +6,7 @@
 #SBATCH --time=00:20:00          # total run time limit (HH:MM:SS)
 
 module purge
-module load julia/1.7.2
+module load julia/1.9.4
 module load cuda11.2/toolkit/11.2.2
 module load cuda11.2/cudnn/8.6.0
 
