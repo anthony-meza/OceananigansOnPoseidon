@@ -11,5 +11,4 @@ model = NonhydrostaticModel(; grid, advection=WENO())
 set!(model, u=ϵ, v=ϵ)
 simulation = Simulation(model; Δt=0.01, stop_time=4)
 run!(simulation)
-
 println("Successful Oceananigans Test")
