@@ -14,3 +14,5 @@ echo 'Starting CUDA test!'
 JULIA_DEBUG=CUDAapi julia CUDA_test.jl
 echo 'Starting Oceananigans test!'
 JULIA_DEBUG=CUDAapi julia Oceananigans_test.jl
+echo 'Starting CLIMAOcean test!'
+JULIA_DEBUG=CUDAapi julia CLIMAOcean_test.jl
