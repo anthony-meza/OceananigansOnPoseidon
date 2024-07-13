@@ -1,7 +1,7 @@
 path = "/vortexfs1/home/anthony.meza/OceananigansOnPoseidon"
 using Pkg
 Pkg.activate(path)
-Pkg.add("https://github.com/CliMA/ClimaOcean.jl.git")
+Pkg.add(url="https://github.com/CliMA/ClimaOcean.jl.git")
 Pkg.add("Printf")
 Pkg.instantiate()
 
@@ -156,6 +156,6 @@ wizard = TimeStepWizard(; cfl = 0.1, max_Δt = 90, max_change = 1.1)
 ocean.callbacks[:wizard] = Callback(wizard, IterationInterval(1))
 
 # Finally, the coupled simulation!
-coupled_simulation = Simulation(coupled_model; Δt=1, stop_time = 3days)
+coupled_simulation = Simulation(coupled_model; Δt=1, stop_time = 20days)
 
 run!(coupled_simulation)
